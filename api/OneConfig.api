@@ -1116,6 +1116,30 @@ public class cc/polyfrost/oneconfig/renderer/font/Fonts {
 	public fun <init> ()V
 }
 
+public class cc/polyfrost/oneconfig/renderer/notifications/Notification {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;JZ)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;JZZ)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Z)V
+	public fun draw (J)Z
+	public fun getDuration ()J
+	public fun getMessage ()Ljava/lang/String;
+	public fun getName ()Ljava/lang/String;
+	public fun isDismissible ()Z
+}
+
+public class cc/polyfrost/oneconfig/renderer/notifications/NotificationManager {
+	public final field INSTANCE Lcc/polyfrost/oneconfig/renderer/notifications/NotificationManager;
+	public fun <init> ()V
+	public fun clear ()V
+	public fun getMaxNotifications ()I
+	public fun getQueue ()Ljava/util/Deque;
+	public fun remove (Lcc/polyfrost/oneconfig/renderer/notifications/Notification;)V
+	protected fun render ()V
+	public fun sendNotification (Lcc/polyfrost/oneconfig/renderer/notifications/Notification;)V
+	public fun sendNotification (Lcc/polyfrost/oneconfig/renderer/notifications/Notification;Z)V
+	public fun setMaxNotifications (I)V
+}
+
 public class cc/polyfrost/oneconfig/renderer/scissor/Scissor {
 	public field height F
 	public field width F

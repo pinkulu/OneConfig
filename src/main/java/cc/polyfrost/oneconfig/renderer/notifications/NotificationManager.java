@@ -6,6 +6,8 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class NotificationManager {
+    /** not currently implemented! */
+    @Deprecated
     public final NotificationManager INSTANCE = new NotificationManager();
     private final Deque<Notification> notifications = new ArrayDeque<>();
     private int maxNotifications = 3;
@@ -14,6 +16,7 @@ public class NotificationManager {
 
     }
 
+    @Deprecated
     public void sendNotification(Notification notification, boolean first) {
         if(first) {
             notifications.addFirst(notification);
@@ -22,6 +25,7 @@ public class NotificationManager {
         }
     }
 
+    @Deprecated
     public void sendNotification(Notification notification) {
         sendNotification(notification, false);
     }
@@ -46,10 +50,6 @@ public class NotificationManager {
         return maxNotifications;
     }
 
-    /**
-     * @deprecated not currently implemented!
-     */
-    @Deprecated
     protected void render() {
         if(notifications.isEmpty()) {
             return;
